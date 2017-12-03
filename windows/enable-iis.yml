@@ -9,6 +9,7 @@
         include_sub_features: True
         include_management_tools: True
         register: update_result
+      ignore_errors: yes            
         
     - win_reboot:
       when: update_result.reboot_required
