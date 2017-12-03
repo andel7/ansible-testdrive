@@ -7,9 +7,9 @@
         name: Web-Server
         state: present
         include_sub_features: True
-        include_management_tools: True
-        register: update_result
+        include_management_tools: True 
       ignore_errors: yes            
-        
+      register: update_result
+      
     - win_reboot:
       when: update_result.reboot_required
